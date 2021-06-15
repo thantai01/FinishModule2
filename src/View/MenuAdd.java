@@ -44,6 +44,7 @@ public class MenuAdd {
         System.out.print("Enter a Group Name:");
         String groupName = sc.nextLine();
         group.setName(groupName);
+        phone.add(group);
         return group;
     }
 
@@ -64,6 +65,7 @@ public class MenuAdd {
         System.out.println("Enter Person Address");
         String personAdd = sc.nextLine();
         contact = new PhoneContact(groupName,personName,personGender,personAdd,personDOB, personEmail,phoneNumber);
+        contactManager.add(contact);
         return contact;
     }
 
