@@ -57,7 +57,6 @@ public class ContactManager implements Manager<PhoneContact>, Find<PhoneContact>
         return -1;
     }
 
-
     @Override
     public void findByPhoneNums(String phoneNums) {
         for(PhoneContact contact: phoneContactList) {
@@ -72,6 +71,13 @@ public class ContactManager implements Manager<PhoneContact>, Find<PhoneContact>
         for(PhoneContact contact: phoneContactList) {
             if(name.equals(contact.getName())) {
                 System.out.println(contact + "\n");
+            }
+        }
+    }
+    public void deleteContact(String phoneNumber) {
+        for(PhoneContact contact: phoneContactList) {
+            if(contact.getPhoneNums().equals(phoneNumber)) {
+                phoneContactList.remove(findIndex(phoneNumber));
             }
         }
     }

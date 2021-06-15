@@ -45,6 +45,7 @@ public class MainMenu {
                     MenuEdit.editContact(contactManager);
                     break;
                 case 4:
+
                     break;
                 case 5:
                     break;
