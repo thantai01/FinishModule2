@@ -17,7 +17,6 @@ public class MenuAdd {
         System.out.println("Choose your next action: ");
         System.out.println("1. Add new group. ");
         System.out.println("2. Add new contact. ");
-        System.out.println("3. Back to main menu.");
         System.out.println("_____________________________");
     }
     public static void addAction (GroupManager phone) {
@@ -45,6 +44,8 @@ public class MenuAdd {
         String groupName = sc.nextLine();
         group.setName(groupName);
         phone.add(group);
+        System.out.println("New Group created");
+        System.out.println("-----------------");
         return group;
     }
 

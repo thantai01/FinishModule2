@@ -1,12 +1,15 @@
 package View;
 
+import Service.ContactManager;
 import Service.GroupManager;
 
 import java.util.Scanner;
 
 public class MainMenu {
     static Scanner sc = new Scanner(System.in);
-    GroupManager phone = MenuAdd.phone;
+    static GroupManager phone = MenuAdd.phone;
+    static ContactManager contactManager = MenuAdd.contactManager;
+
 
     public static void intro() {
         System.out.println("----- CONTACT MANAGER PROGRAM -----");
@@ -24,7 +27,7 @@ public class MainMenu {
         System.out.println("8. Exit");
         System.out.println("____________________________________");
     }
-    public static void mainAction(GroupManager phone) {
+    public static void mainAction() {
         int actionInput;
         do {
             mainMenu();
@@ -37,9 +40,9 @@ public class MainMenu {
                 case 2:
                     MenuAdd.add();
                     MenuAdd.addAction(phone);
-
                     break;
                 case 3:
+                    MenuEdit.editContact(contactManager);
                     break;
                 case 4:
                     break;
